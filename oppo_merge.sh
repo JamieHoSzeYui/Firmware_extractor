@@ -2,7 +2,7 @@
 
 # oppo merger
 
-PARTITIONS="my_carrier my_company my_engineering my_heytap my_manifest my_preload my_product my_region my_stock"
+PARTITIONS="my_carrier my_company my_engineering my_heytap my_manifest my_preload my_product my_region my_stock my_version special_preload my_bigball"
 merge() {
     mkdir $partition
     mount -o ro $partition.img $partition 
