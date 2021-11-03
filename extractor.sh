@@ -186,7 +186,7 @@ done
 if [[ $(7z l -ba "$romzip" | grep firmware-update/dtbo.img) ]]; then
     7z e -y "$romzip" firmware-update/dtbo.img 2>/dev/null >> $tmpdir/zip.log
 fi
-if [[ $(7z l -ba "$romzip" | grep system.new.dat) ]]; then
+if [[ $(7z l -ba "$romzip" | grep new.dat) ]]; then
     echo "Aonly OTA detected"
     for partition in $PARTITIONS; do
         7z e -y "$romzip" $partition.new.dat* $partition.transfer.list $partition.img 2>/dev/null >> $tmpdir/zip.log
