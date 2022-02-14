@@ -7,7 +7,7 @@ merge() {
     mkdir $partition
     mount -o loop -t auto $partition.img $partition 
     cd system
-    cp -fpr ../$partition/ .
+    cp -ap ../$partition/ .
     cd ..
     umount $partition
     rm -rf $partition/
